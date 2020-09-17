@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>selected</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <p>Variações do Select<br>
+      Verifique as opções de exibição e seleção abaixo:
+      </p>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>
+            <b>Seleção única</b>
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label stacked>Nome</ion-label>
+          <ion-input type="text" text-right [(ngModel)]="nome"></ion-input>
+        </ion-item>
+       
+        <ion-item>
+          <ion-label>Gênero</ion-label>
+          <ion-select placeholder="Selecione aqui" [(ngModel)]="cbmGenero">
+            <ion-select-option value="Menina">Menina</ion-select-option>
+            <ion-select-option value="Menino">Menino</ion-select-option>
+          </ion-select>
+        </ion-item>
+       
+        <ion-item>
+          <ion-label>Cor do cabelo</ion-label>
+          <ion-select [(ngModel)]="cbmCor" value="Castanho" okText="OK" cancelText="Cancelar">
+            <ion-select-option value="Castanho">Castanho</ion-select-option>
+            <ion-select-option value="Loiro">Loiro</ion-select-option>
+            <ion-select-option value="Preto">Preto</ion-select-option>
+            <ion-select-option value="Vermelho">Vermelho</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>
+            <b>Seleção Múltipla</b>
+          </ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Experiências</ion-label>
+          <ion-select [(ngModel)]="chkExp" multiple="true" cancelText="Cancelar" okText="OK">
+            <ion-select-option value="C++">C++</ion-select-option>
+            <ion-select-option value="C#">C#</ion-select-option>
+            <ion-select-option value="Java">Java</ion-select-option>
+            <ion-select-option value="PHP">PHP</ion-select-option>
+            <ion-select-option value="MySQL">MySQL</ion-select-option>
+            <ion-select-option value="HTML">HTML</ion-select-option>
+            <ion-select-option value="JavaScript">JavaScript</ion-select-option>
+            <ion-select-option value="Arduino">Arduino</ion-select-option>
+            <ion-select-option value="Ionic">Ionic</ion-select-option>
+            <ion-select-option value="Cobol">Cobol</ion-select-option>
+          </ion-select>
+        </ion-item>
+       
+        <ion-item>
+          <ion-label>Hobbies</ion-label>
+          <ion-select [(ngModel)]="chkHobbies" multiple="true">
+            <ion-select-option value="Leitura">Leitura</ion-select-option>
+            <ion-select-option value="Games">Games</ion-select-option>
+            <ion-select-option value="Cinema">Cinema</ion-select-option>
+            <ion-select-option value="Praia">Praia</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-button (click)="exibir()" expand="full">Exibir Toast</ion-button>
+      <ion-button (click)="exibir2()" expand="full">Exibir TxtArea</ion-button>
+      <!--Uma TextArea para a exibição dos dados-->
+      <ion-item>
+        <ion-label position="stacked">Registro</ion-label>
+        <ion-textarea [(ngModel)]="txtSaida" readonly ></ion-textarea>
+      </ion-item>
+      <ion-item>Grato pela preferência!</ion-item>
+
+    <ion-button color="primary" (click)="alertIonic()">Alert Ionic</ion-button>
+  </div>
+</ion-content>

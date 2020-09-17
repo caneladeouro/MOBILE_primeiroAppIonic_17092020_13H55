@@ -1,0 +1,60 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-menu-button color="primary" slot="start"></ion-menu-button>
+      <ion-title>
+        Top100
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/home">
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-title>
+            Home
+          </ion-title>
+        </ion-item>
+
+        <ion-item routerLink="/contato">
+          <ion-icon name="cube-outline" src="assets/icon/contact.svg"></ion-icon>
+          <ion-title>
+            Contato
+          </ion-title>
+        </ion-item>
+
+        <ion-item routerLink="/info">
+          <ion-icon name="information-outline"></ion-icon>
+          <ion-title>
+            Info
+          </ion-title>
+        </ion-item>
+
+        <ion-item routerLink="/card">
+          <ion-icon name="card-outline"></ion-icon>
+          <ion-title>
+            Card
+          </ion-title>
+        </ion-item>
+
+        <ion-item routerLink="/selected">
+          <ion-icon name="card-outline" src="assets/icon/select.svg"></ion-icon>
+          <ion-title>
+            Selected
+          </ion-title>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>
